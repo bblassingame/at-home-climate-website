@@ -1,0 +1,81 @@
+
+/** {
+  border: 1px solid black;
+}*/
+
+/*
+overall page setup
+*/
+#main {
+  display: flex;
+  justify-content: center; /*center along cross axis; this is a row layout so centering horizontally requires justify-content, not align-items*/
+  font-family: sans-serif;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+/*
+logo/header
+*/
+.logo-content {
+  margin: 0px 0px 32px;
+}
+
+/*
+features list
+*/
+.features-content {
+  margin: 0px 0px 60px;
+}
+
+.features-list {
+  font-size: 1.5em;
+  padding-left: 30px;
+}
+
+.red-li-items {
+  color: red;
+}
+
+/*
+navigation links
+*/
+.navigation-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  margin: 0px 0px 25px;
+}
+
+/*
+contaction information
+*/
+.contacts-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.phone-container {
+  margin: 0px 0px 5px;
+}
+
+.phone {
+  background-color: #003366;
+  color: white;
+  font-size: 1.7em;
+}
+
+.address {
+  color: red;
+  font-style: italic;
+  font-size: 1.4em;
+}
+
+.location {
+  font-size: .6em;
+}
