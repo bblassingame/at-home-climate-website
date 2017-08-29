@@ -2,20 +2,64 @@ import React from 'react'
 
 const SizesAndRates = function() {
 
+  // takes an item and returns a table cell for the size column
+  // example:  item.length = 10, item.width = 12   result = <td>10 x 12</td>
+  const getSizeCell = function(item) {
+    return <td>{formatSize(item.length, item.width)}</td>;
+  }
+
+  // function takes a width and a length and converts them to a '<length> x <width>' format
+  // example:  length = 10, width = 10   result = '10 x 10
+  const formatSize = function(length, width) {
+    return formatDimension(length) + ' x ' + formatDimension(width);
+  }
+
+  // function takes a dimension and converts the decimal portion to a vulgar fraction
+  // we only support .5 -> ½ right now
+  // example:  7.5 -> 7½
+  const formatDimension = function(dimension) {
+    let numericalParts = (dimension + "").split("."); // split at the '.' separate the integer and decimal
+    let formattedDimension = numericalParts[0]; // set the initial integer portion
+    if( numericalParts.length > 1 ) { // check if there is actually a fractional part
+      formattedDimension += '\u00bd'; // append the vulgar fraction if needed
+    }
+    return formattedDimension;
+  }
+
+  // takes an item and returns a table cell for the size column
+  // example:  item.rate = 80   result = <td>'\u0024'80.<sup>00</sup></td>
+  const getRateCell = function(item) {
+    let value = parseFloat(item.rate).toFixed(2); // convert the value to a 2 decimal float
+    let numericalParts = (value + "").split("."); // split at the '.' separate the integer and decimal
+    return (
+      <td>
+        {'\u0024' + numericalParts[0] + '.'}<sup>{numericalParts[1]}</sup>
+      </td>
+    )
+  }
+
   const createRows = function() {
-    return(rateData.map((item, i) => <tr key={i}><td>{item.size}</td><td>{item.rate}</td></tr>))
+    return(rateData.map((item, i) => {
+      return (
+        <tr key={i}>
+          {getSizeCell(item)}
+          {getRateCell(item)}
+          {/* <td>{formatRate(item.rate)}</td> */}
+        </tr>
+      )
+    }))
   }
 
   return(
     <div className='info-panel sizes-and-rates'>
       <table className='rate-size-table'>
-        <thead>
+        <thead className='rate-size-table-header'>
           <tr>
-            <td>Sizes</td>
-            <td>Rent (per month)</td>
+            <td className='sizes-header'>Sizes (ft)</td>
+            <td className='rent-header'>Rent (per month)</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='rate-size-table-body'>
           {createRows()}
         </tbody>
       </table>
@@ -24,13 +68,13 @@ const SizesAndRates = function() {
 }
 
 const rateData = [
-  {rate: 75, size: '7.5 x 7.5'},
-  {rate: 87.5, size: '7.5 x 10'},
-  {rate: 120, size: '7.5 x 15'},
-  {rate: 100, size: '10 x 10'},
-  {rate: 120, size: '10 x 12'},
-  {rate: 130, size: '10 x 15'},
-  {rate: 160, size: '15 x 15'},
+  {rate: 75, length: 7.5, width: 7.5},
+  {rate: 87.5, length: 7.5, width: 10},
+  {rate: 120, length: 7.5, width: 15},
+  {rate: 100, length: 10, width: 10},
+  {rate: 120, length: 10, width: 12},
+  {rate: 130, length: 10, width: 15},
+  {rate: 160, length: 15, width: 15},
 ]
 
 export default SizesAndRates;

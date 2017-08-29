@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Features = function() {
-    return(
+const Features = function () {
+    return (
         <div className="features-content">
             <ul className="features-list">
                 <li className="red-li-items">All Climate Controlled Units</li>
