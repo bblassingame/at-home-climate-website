@@ -8,14 +8,22 @@ overall page setup
 */
 #main {
   display: flex;
-  justify-content: center; /*center along cross axis; this is a row layout so centering horizontally requires justify-content, not align-items*/
+  justify-content: center; /*center along main axis*/
   font-family: sans-serif;
 }
 
-.main-content {
+.app-content {
   display: flex;
   flex-direction: column;
   width: 500px;
+}
+
+/*
+common panel/ui styling
+*/
+.info-panel {
+  width: 100%;
+  height: 300px;
 }
 
 /*
@@ -50,6 +58,23 @@ navigation links
   font-size: 1.2em;
   margin: 0px 0px 25px;
 }
+
+/*
+sizes and rates
+*/
+.sizes-and-rates {
+  display: flex;
+  justify-content: center;
+}
+
+tr {
+  border: 2px;
+}
+
+/*
+location
+/*
+
 
 /*
 contaction information

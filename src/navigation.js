@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navigation = function() {
     return(
         <div className="navigation-content">
-            <div><span>Size & Rate Information</span></div>
-            <div><span>Location & Map</span></div>
+            <Link to='Rates'>Size & Rate Information</Link>
+            <Link to='Location'>Location & Map</Link>
         </div>
     )
 }

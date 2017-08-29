@@ -1,12 +1,12 @@
 import React from 'react'
 
-const SizesAndRates = function() {
+const MapAndLocation = function() {
   return(
-    <div>
+    <div className='info-panel'>
       <div>Map Inserted Here</div>
       <div>Other location information here</div>
     </div>
   )
 }
 
-export default SizesAndRates;
+export default MapAndLocation;

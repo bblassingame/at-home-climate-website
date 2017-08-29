@@ -1,19 +1,18 @@
 import React from 'react'
-import Logo from './logo'
-import Features from './features'
-import Navigation from './navigation'
-import Contact from './contact'
+import { HashRouter } from 'react-router-dom'
 
-// TODO:  Put in the style sheet that puts the browser back to zero
-// need to add support for styles and get those into here somehow
+import AppContent from './app-content'
+
+// Using HashRouter instead of BrowserRouter because I'm assuming that we will use a static
+// webserver at first and not a dynamic web server.  This makes the URLs ugly, but it works
+// for now.  If I find out we have a dynamic web server, I'll go back to BrowserRouter.
+// NOTE:  Using BrowserRouter will require me to route all URLs that the server doesn't recoginze
+// to the base application URL.
 const App = function() {
 	return (
-		<div className="main-content">
-			<Logo />
-			<Features />
-			<Navigation />
-			<Contact />
-		</div>
+		<HashRouter>
+			<AppContent />
+		</HashRouter>
 	)
 }
 
