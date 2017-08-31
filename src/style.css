@@ -1,4 +1,3 @@
-
 /** {
   border: 1px solid black;
 }*/
@@ -99,7 +98,7 @@ sup {
 location
 */
 .map-location-panel {
-  background: url(/src/Loading_icon.gif) center center no-repeat
+  background: url(./Loading_icon.gif) center center no-repeat
 }
 
 /*

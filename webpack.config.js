@@ -9,7 +9,6 @@ module.exports = {
     entry: ['babel-polyfill', ENTRY_PATH],
     output: {
         path: BUILD_DIR,
-        publicPath: '/bin/',
         filename: "bundle.js"
     },
     module: {
@@ -35,7 +34,15 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(gif|png|jpg)$/,
+                exclude: /node_modules/,
+                loader: 'file-loader'
             }
         ]
+    },
+    devServer: {
+
     },
 };

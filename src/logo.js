@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import logoMain from './logo-main.jpg';
 
 const Logo = function() {
     return(
         <div className="logo-content">
-            <img src="./src/logo-main.jpg" />
+            <img src={logoMain} />
         </div>        
     )
 }
