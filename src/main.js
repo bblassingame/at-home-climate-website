@@ -4,7 +4,9 @@ import App from './app';
 import './reset.css';
 import './style.css';
 
-console.log('Starting Application');
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Starting Application');
+}
 
 ReactDOM.render(
   <App />,
