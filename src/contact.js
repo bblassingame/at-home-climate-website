@@ -10,7 +10,7 @@ const Contact = function() {
                 </div>
                 <div>
                     
-                    <p className="address">2000 Jahan Trail  Longview, TX  75604</p>
+                    <p className="address">2000 Jahan Trail, Longview TX  75604</p>
                     {/* <p className="address">2000 Jahan Trail</p>
                     <p className="address">Longview, TX  75604</p> */}
                 </div>
