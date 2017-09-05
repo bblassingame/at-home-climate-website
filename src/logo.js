@@ -6,7 +6,7 @@ const Logo = function() {
     return(
         <div className="logo-content">
             <Link to='/'>
-                <img src={logoMain} alt='The logo for At Home Climate Storage in Longview, TX'/>
+                <img className="img-fill" src={logoMain} alt='The logo for At Home Climate Storage in Longview, TX'/>
             </Link>
         </div>        
     )

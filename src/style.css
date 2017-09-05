@@ -1,16 +1,27 @@
 /*
 overall page setup
 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
 #main {
   display: flex;
-  justify-content: center; /*center along main axis*/
+  flex-direction: column;
+  align-content: center; /*center along main axis*/
   font-family: sans-serif;
+  height: 100%;
 }
 
 .app-content {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 100%;
+  height: 100%;
 }
 
 /*
@@ -18,8 +29,8 @@ common panel/ui styling
 */
 .info-panel {
   width: 100%;
-  height: 300px;
-  margin: 0px 0px 10px
+  margin: 0px 0px 10px;
+  flex: 1 0 auto;
 }
 
 /*
@@ -27,6 +38,11 @@ logo/header
 */
 .logo-content {
   margin: 0px 0px 20px;
+}
+
+.img-fill {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 /*
@@ -37,7 +53,7 @@ features list
 }
 
 .features-list {
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding-left: 30px;
 }
 
@@ -51,7 +67,7 @@ navigation links
 .navigation-content {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2em;
+  font-size: 1.0em;
   margin: 0px 0px 25px;
 }
 
@@ -94,7 +110,13 @@ sup {
 location
 */
 .map-location-panel {
-  background: url(./Loading_icon.gif) center center no-repeat
+  background: url(./Loading_icon.gif) center center no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-location-panel iframe {
+  flex: 1 0 auto;
 }
 
 /*
@@ -109,7 +131,11 @@ contaction information
 .phone-container {
   margin: 0px 0px 15px;
   color: red;
-  font-size: 1.7em;
+  font-size: 1.5em;
+}
+
+.call-today {
+  margin: 0px 0px 5px;
 }
 
 .phone {
@@ -126,3 +152,4 @@ contaction information
   font-size: .6em;
   text-align: center;
 }
+
