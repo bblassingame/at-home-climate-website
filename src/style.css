@@ -142,6 +142,10 @@ contaction information
   margin: 0px 0px 0px 35px;
 }
 
+.phone a {
+  color: red;
+}
+
 .address {
   font-style: italic;
   font-size: 1.2em;
