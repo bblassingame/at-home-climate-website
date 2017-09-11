@@ -1,6 +1,13 @@
-/*
-overall page setup
-*/
+
+/*********************************************************************************
+**********************************************************************************
+                                MOBILE FIRST LAYOUT
+**********************************************************************************
+*********************************************************************************/
+
+/**********************************************************************
+                          overall page setup
+**********************************************************************/
 * {
   box-sizing: border-box;
 }
@@ -12,7 +19,6 @@ html, body {
 #main {
   display: flex;
   flex-direction: column;
-  align-content: center; /*center along main axis*/
   font-family: sans-serif;
   height: 100%;
 }
@@ -24,20 +30,21 @@ html, body {
   height: 100%;
 }
 
-/*
-common panel/ui styling
-*/
+/**********************************************************************
+                          common panel/ui styling
+**********************************************************************/
 .info-panel {
-  width: 100%;
   margin: 0px 0px 10px;
-  flex: 1 0 auto;
+  max-height: 350px;
+  flex: 1 0 auto; /*causes the info-panel to take up all available space between the header and footer*/
 }
 
-/*
-logo/header
-*/
+/**********************************************************************
+                          logo/header
+**********************************************************************/
 .logo-content {
-  margin: 0px 0px 20px;
+  padding: 0px 0px 20px; /*centers the content and uses padding instead of margins for space for large resolutions*/
+  margin: 0px auto 0px; /*ensure that the logo stays at the top of the page*/
 }
 
 .img-fill {
@@ -45,9 +52,9 @@ logo/header
   max-width: 100%;
 }
 
-/*
-features list
-*/
+/**********************************************************************
+                          features list
+**********************************************************************/
 .features-content {
   margin: 0px 0px 60px;
 }
@@ -61,9 +68,9 @@ features list
   color: red;
 }
 
-/*
-navigation links
-*/
+/**********************************************************************
+                          navigation links
+**********************************************************************/
 .navigation-content {
   display: flex;
   justify-content: space-between;
@@ -71,9 +78,9 @@ navigation links
   margin: 0px 0px 25px;
 }
 
-/*
-sizes and rates
-*/
+/**********************************************************************
+                          sizes and rates
+**********************************************************************/
 .sizes-and-rates {
   display: flex;
   justify-content: center;
@@ -106,9 +113,9 @@ sup {
   font-size: .75em;
 }
 
-/*
-location
-*/
+/**********************************************************************
+                          location
+**********************************************************************/
 .map-location-panel {
   background: url(./Loading_icon.gif) center center no-repeat;
   display: flex;
@@ -119,13 +126,14 @@ location
   flex: 1 0 auto;
 }
 
-/*
-contaction information
-*/
+/**********************************************************************
+                          contaction information
+**********************************************************************/
 .contacts-content {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin: 0px 0px 10px; /*added some space at the bottom to get the last text off the bottom of the screen*/
 }
 
 .phone-container {
@@ -148,7 +156,7 @@ contaction information
 
 .address {
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1.15em;
 }
 
 .location {
@@ -157,3 +165,47 @@ contaction information
   text-align: center;
 }
 
+/*********************************************************************************
+**********************************************************************************
+                                WIDER THAN 500px
+**********************************************************************************
+*********************************************************************************/
+@media (min-width: 500px) /*and (orientation: portrait)*/ {
+  /**********************************************************************
+                            common panel/ui styling
+  **********************************************************************/
+  .info-panel {
+    width: 500px;
+    margin: 0px auto 10px;
+  }
+}
+
+/*********************************************************************************
+**********************************************************************************
+                                LANDSCAPE ORIENTATION
+**********************************************************************************
+*********************************************************************************/
+@media (max-width: 767px) and (orientation: landscape) {
+  .app-content {
+    flex-wrap: wrap;
+  }
+
+  .info-panel {
+    flex: 0 0 auto;
+    margin: auto 0px;
+    width: 300px;
+    order: 3;
+  }
+
+  .logo-content {
+    max-width: 315px;
+    margin: 0px;
+    order: 1;
+  }
+
+  .contacts-content {
+    padding: 0px 0px 10px;
+    margin: auto auto 0px;
+    order: 2;
+  }
+}
