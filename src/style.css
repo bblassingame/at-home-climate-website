@@ -204,6 +204,8 @@ sup {
     width: auto;
     order: 3;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
 /**********************************************************************
