@@ -48,7 +48,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['bin']),
         new HtmlWebpackPlugin({
-            title: 'This is the future website for At Home Climate Control Storage in Longview, Texas',
+            title: 'At Home Climate Storage',
             template: './src/template.ejs'
         })
     ],
