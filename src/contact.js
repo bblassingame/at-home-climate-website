@@ -7,7 +7,7 @@ const Contact = function() {
                 <div className="phone-container">
                     <p className="call-today"><strong>Call today</strong> to reserve a unit...</p>
                     <p className="phone">
-                        <span itemprop="telephone">
+                        <span itemProp="telephone">
                             <a href="tel:+19037575845" rel="nofollow">903-757-5845</a>
                         </span>
                     </p>
