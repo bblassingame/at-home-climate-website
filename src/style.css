@@ -18,14 +18,18 @@ html, body {
 
 #main {
   display: flex;
+  -webkit-display: flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   font-family: sans-serif;
   height: 100%;
 }
 
 .app-content {
   display: flex;
+  -webkit-display: flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   width: 100%;
   height: 100%;
 }
@@ -37,6 +41,7 @@ html, body {
   margin: 0px 0px 10px;
   max-height: 350px;
   flex: 1 0 auto; /*causes the info-panel to take up all available space between the header and footer*/
+  -webkit-flex: 1 0 auto; /*causes the info-panel to take up all available space between the header and footer*/
 }
 
 /**********************************************************************
@@ -45,6 +50,7 @@ html, body {
 .logo-content {
   padding: 0px 0px 20px; /*centers the content and uses padding instead of margins for space for large resolutions*/
   margin: 0px auto 0px; /*ensure that the logo stays at the top of the page*/
+  text-align: center; /*covers an ie bug where margin: auto doesn't work for centering: this centers the logo*/
 }
 
 .img-fill {
@@ -73,7 +79,9 @@ html, body {
 **********************************************************************/
 .navigation-content {
   display: flex;
+  -webkit-display: flex;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
   font-size: 1.0em;
   margin: 0px 0px 25px;
 }
@@ -83,7 +91,9 @@ html, body {
 **********************************************************************/
 .sizes-and-rates {
   display: flex;
+  -webkit-display: flex;
   justify-content: center;
+  -webkit-justify-content: center;
 }
 
 .rate-size-table td {
@@ -119,11 +129,14 @@ sup {
 .map-location-panel {
   background: url(./Loading_icon.gif) center center no-repeat;
   display: flex;
+  -webkit-display: flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
 }
 
 .map-location-panel iframe {
   flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
 }
 
 /**********************************************************************
@@ -131,8 +144,11 @@ sup {
 **********************************************************************/
 .contacts-content {
   display: flex;
+  -webkit-display: flex;
   flex-flow: column;
+  -webkit-flex-flow: column;
   align-items: center;
+  -webkit-align-items: center;
   margin: 0px 0px 10px; /*added some space at the bottom to get the last text off the bottom of the screen*/
 }
 
@@ -193,6 +209,7 @@ sup {
 **********************************************************************/
 .app-content {
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
   }
 
 /**********************************************************************
@@ -200,13 +217,16 @@ sup {
 **********************************************************************/
   .info-panel {
     flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
     margin: auto 0px;
     width: auto;
     height: 100%;
     order: 3;
     display: flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     justify-content: center;
+    -webkit-justify-content: center;
   }
 
 /**********************************************************************
