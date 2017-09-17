@@ -1,6 +1,6 @@
 {
   "name": "at-home-climate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "At Home Climate Controlled Storage Website",
   "main": "./src/main.js",
   "scripts": {
@@ -35,6 +35,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.5",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
