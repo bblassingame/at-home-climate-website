@@ -1,6 +1,15 @@
 import React from 'react'
+import ReactGA from 'react-ga'
 
 const Contact = function() {
+
+    const logPhoneClick = () => {
+        ReactGA.event(
+            'Phone Link',
+            'Click to Call'
+        )
+    }
+
     return(
         <div className="contacts-content">
             <div className="center-contacts-content">
