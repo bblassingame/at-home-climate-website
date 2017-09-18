@@ -17,7 +17,7 @@ const Contact = function() {
                     <p className="call-today"><strong>Call today</strong> to reserve a unit...</p>
                     <p className="phone">
                         <span itemProp="telephone">
-                            <a href="tel:+19037575845" rel="nofollow">903-757-5845</a>
+                            <a href="tel:+19037575845" rel="nofollow" onClick={logPhoneClick}>903-757-5845</a>
                         </span>
                     </p>
                 </div>
