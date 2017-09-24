@@ -9,19 +9,7 @@ import SizesAndRates from './sizes-rates'
 import MapAndLocation from './map-location'
 import Contact from './contact'
 
-// ReactGA.initialize('UA-106318026-1',
-//   {
-//     debug: false,
-//   }
-// )
-
 const AppContent = function() {
-
-  // const logPageView = function() {
-  //   console.log('AppContent->onUpdate->logPageView')
-  //   ReactGA.set({ page: window.location.pathname + window.location.search })
-  //   ReactGA.pageview(window.location.pathname + window.location.search)
-  // }
 
   return(
     <div className="app-content">
