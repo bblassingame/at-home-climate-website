@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter } from 'react-router-dom'
 
 import AppContent from './app-content'
+import AppContent2 from './layout-v2/app-content2'
 
 // Using HashRouter instead of BrowserRouter because I'm assuming that we will use a static
 // webserver at first and not a dynamic web server.  This makes the URLs ugly, but it works
@@ -11,7 +12,7 @@ import AppContent from './app-content'
 const App = function() {
   return (
     <HashRouter>
-      <AppContent />
+      <AppContent2 />
     </HashRouter>
   )
 }
