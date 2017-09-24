@@ -13,7 +13,6 @@ GoogleAnalytics.initialize('UA-106318026-1')
 // that we want to implement google analytics on for the page views.
 const gaTracker = (WrappedComponent) => {
   const trackPage = (page) => {
-    console.log('page tracking sent')
     GoogleAnalytics.set({ page })
     GoogleAnalytics.pageview(page)
   }
