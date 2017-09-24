@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import ReactGA from 'react-ga'
 
 import gaTracker from './ga-tracker'
 
