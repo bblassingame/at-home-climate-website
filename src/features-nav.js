@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Logo from './logo'
+// import Logo from './logo'
 import Features from './features'
 import Navigation from './navigation'
-import Contact from './contact'
+// import Contact from './contact'
 
 const FeaturesAndNav = function() {
   return(
@@ -14,4 +14,4 @@ const FeaturesAndNav = function() {
   )
 }
 
-export default FeaturesAndNav;
+export default FeaturesAndNav

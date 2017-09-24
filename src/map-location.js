@@ -8,4 +8,4 @@ const MapAndLocation = function() {
   )
 }
 
-export default MapAndLocation;
+export default MapAndLocation

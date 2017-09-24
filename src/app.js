@@ -9,11 +9,11 @@ import AppContent from './app-content'
 // NOTE:  Using BrowserRouter will require me to route all URLs that the server doesn't recoginze
 // to the base application URL.
 const App = function() {
-	return (
-		<HashRouter>
-			<AppContent />
-		</HashRouter>
-	)
+  return (
+    <HashRouter>
+      <AppContent />
+    </HashRouter>
+  )
 }
 
-export default App;
+export default App

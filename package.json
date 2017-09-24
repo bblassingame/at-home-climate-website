@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config webpack.dev.js --inline --hot --progress --colors",
     "build": "webpack --config webpack.prod.js",
-    "babel": "babel --presets=es2015,react -d bin/ src/"
+    "babel": "babel --presets=es2015,react -d bin/ src/",
+    "lint" : "eslint src/*.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,8 @@
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.5",
+    "eslint": "^4.7.1",
+    "eslint-plugin-react": "^7.3.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "react-hot-loader": "^1.3.1",
