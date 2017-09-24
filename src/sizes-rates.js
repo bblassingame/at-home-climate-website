@@ -30,7 +30,7 @@ const SizesAndRates = function() {
   // example:  item.rate = 80   result = <td>'\u0024'80.<sup>00</sup></td>
   const getRateCell = function(item) {
     let value = parseFloat(item.rate).toFixed(2) // convert the value to a 2 decimal float
-    let numericalParts = (value + '""').split('.') // split at the '.' separate the integer and decimal
+    let numericalParts = (value).split('.') // split at the '.' separate the integer and decimal
     return (
       <td>
         {'\u0024' + numericalParts[0] + '.'}<sup>{numericalParts[1]}</sup>
@@ -44,7 +44,6 @@ const SizesAndRates = function() {
         <tr key={i}>
           {getSizeCell(item)}
           {getRateCell(item)}
-          {/* <td>{formatRate(item.rate)}</td> */}
         </tr>
       )
     }))
@@ -68,13 +67,9 @@ const SizesAndRates = function() {
 }
 
 const rateData = [
-  {rate: 75, length: 7.5, width: 7.5},
-  {rate: 87.5, length: 7.5, width: 10},
-  {rate: 120, length: 7.5, width: 15},
-  {rate: 100, length: 10, width: 10},
-  {rate: 120, length: 10, width: 12},
-  {rate: 130, length: 10, width: 15},
-  {rate: 160, length: 15, width: 15},
+  {rate: 75, length: 7.5, width: 10},
+  {rate: 90, length: 10, width: 10},
+  {rate: 120, length: 10, width: 15},
 ]
 
 export default SizesAndRates
