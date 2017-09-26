@@ -7,3 +7,22 @@
   justify-content: space-between;
   -webkit-justify-content: space-between;
 }
+
+.footer-content {
+  width: 100%;
+  margin: auto 0px 0px;
+}
+
+.footer-base {
+  text-align: center;
+  padding: 0 0 5px;
+}
+
+.footer-text {
+  font-style: italic;
+  font-size: 1.15em;
+}
+
+.footer-subtext {
+  font-size: .6em;
+}
