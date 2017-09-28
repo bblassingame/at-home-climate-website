@@ -11,7 +11,7 @@ const SizesAndRates = function() {
   // function takes a width and a length and converts them to a '<length> x <width>' format
   // example:  length = 10, width = 10   result = '10 x 10
   const formatSize = function(length, width) {
-    return formatDimension(length) + ' x ' + formatDimension(width)
+    return formatDimension(length) + '\' x ' + formatDimension(width) + '\''
   }
 
   // function takes a dimension and converts the decimal portion to a vulgar fraction
@@ -54,10 +54,12 @@ const SizesAndRates = function() {
       <table className='rate-size-table'>
         <thead className='rate-size-table-header'>
           <tr>
-            <td className='sizes-header'>Sizes (ft)</td>
-            <td className='rent-header'>Rent (per month)</td>
+            {/* <td className='sizes-header'>Sizes (ft)</td>
+            <td className='rent-header'>Rent (per month)</td> */}
+            <td>Available Units</td>
           </tr>
         </thead>
+        <thead />
         <tbody className='rate-size-table-body'>
           {createRows()}
         </tbody>
