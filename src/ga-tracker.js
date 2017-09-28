@@ -8,6 +8,11 @@ import GoogleAnalytics from 'react-ga'
 
 GoogleAnalytics.initialize('UA-106318026-1')
 
+/*global process*/
+if (process.env.NODE_ENV !== 'production') {
+  console.log('Dev Environment Detected:  Disabling Google Analytics')
+}
+
 // we're going to wrap the component passed in with this higher order class/object
 // that will have the google page view tracking set up.  We can add this to any page
 // that we want to implement google analytics on for the page views.
