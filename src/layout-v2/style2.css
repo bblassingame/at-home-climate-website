@@ -14,6 +14,19 @@ up to something like a Galaxy s8 or iPhone 8 Plus.
   -webkit-justify-content: space-between;
 }
 
+.social-container {
+  display: flex;
+  -webkit-display: flex;
+}
+
+.social-container :nth-child(0n+2) {
+  padding: 0 5px;
+}
+
+.social img {
+  border-radius: 8px;
+}
+
 /*****************************   Main Content Styling   *****************************/
 
 
