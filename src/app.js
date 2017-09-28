@@ -1,7 +1,6 @@
 import React from 'react'
 import { HashRouter } from 'react-router-dom'
 
-import AppContent from './app-content'
 import AppContent2 from './layout-v2/app-content2'
 
 // Using HashRouter instead of BrowserRouter because I'm assuming that we will use a static
@@ -9,7 +8,7 @@ import AppContent2 from './layout-v2/app-content2'
 // for now.  If I find out we have a dynamic web server, I'll go back to BrowserRouter.
 // NOTE:  Using BrowserRouter will require me to route all URLs that the server doesn't recoginze
 // to the base application URL.
-const App = function() {
+const App = () => {
   return (
     <HashRouter>
       <AppContent2 />
