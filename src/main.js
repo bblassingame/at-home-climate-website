@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
 import './reset.css'
-import './style.css'
+// import './style.css'
 import './layout-v2/style2.css'
 
 /*global process*/

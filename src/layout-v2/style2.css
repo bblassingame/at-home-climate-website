@@ -3,6 +3,35 @@ Focusing a mobile first layout, so everything here will be for smaller mobile di
 up to something like a Galaxy s8 or iPhone 8 Plus.
 */
 
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*****************************   App Styling   *****************************/
+html, body {
+  height: 100%;
+}
+
+#main {
+  display: flex;
+  -webkit-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.app-content {
+  display: flex;
+  -webkit-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
 /*****************************   Header Styling   *****************************/
 .header-content {
   width: 100%;
@@ -27,8 +56,37 @@ up to something like a Galaxy s8 or iPhone 8 Plus.
   border-radius: 8px;
 }
 
-/*****************************   Main Content Styling   *****************************/
+.img-fill {
+  max-height: 100%;
+  max-width: 100%;
+}
 
+/*****************************   Main Content Styling   *****************************/
+.main-content {
+  padding: 0 0 0 5px;
+}
+
+.mc-sub-panel {
+  display: flex;
+  -webkit-display: flex;
+  padding: 0 0 10px;
+}
+
+.mc-sub-panel-img {
+  height: 1.75em;
+  max-width: 100%;
+}
+
+.mc-sub-panel-header-container {
+  padding: 0 0 0 5px;
+}
+
+.mc-sub-panel-header {
+  font-size: 1.75em;
+  padding: 0 0 0 5px;
+  display: inline-block;
+  vertical-align: bottom;
+}
 
 /*****************************   Footer Styling   *****************************/
 .footer-content {
