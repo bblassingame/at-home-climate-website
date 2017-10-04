@@ -83,9 +83,29 @@ html, body {
 
 .mc-sub-panel-header {
   font-size: 1.75em;
-  padding: 0 0 0 5px;
+  padding: 0 0 5px;
   display: inline-block;
   vertical-align: bottom;
+}
+
+/*****************************   Main Content Styling   *****************************/
+.units-dim-row {
+  padding: 0 0 2px;
+}
+
+.units-dimensions {
+  display: inline-block;
+  width: 120px;
+}
+
+.units-info-container {
+  font-size: .75em;
+}
+
+.units-info-availability {
+  display: inline-block;
+  padding: 0 5px 0 0;
+  font-style: italic;
 }
 
 /*****************************   Footer Styling   *****************************/
