@@ -32,6 +32,13 @@ html, body {
   height: 100%;
 }
 
+/* anchor/link text properties*/
+a         { text-decoration: none;      font-weight: 600; }
+a:link    { color: #1155cc;                             }
+a:visited { color: #6611CC;                             }
+a:hover   { text-decoration: underline;                   }
+a:active  { color: #1155cc;                             }
+
 /*****************************   Header Styling   *****************************/
 .header-content {
   width: 100%;
@@ -52,7 +59,8 @@ html, body {
   padding: 0 5px;
 }
 
-.social img {
+.social-img {
+  max-height: 100%;
   border-radius: 8px;
 }
 
