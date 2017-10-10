@@ -71,7 +71,7 @@ a:active  { color: #1155cc;                             }
 
 /*****************************   Main Content Styling   *****************************/
 .main-content {
-  padding: 0 0 0 5px;
+  padding: 0 5px 0 5px;
 }
 
 .mc-sub-panel {
@@ -96,7 +96,7 @@ a:active  { color: #1155cc;                             }
   vertical-align: bottom;
 }
 
-/*****************************   Main Content Styling   *****************************/
+/*****************************   Units Content Styling   *****************************/
 .units-dim-row {
   padding: 0 0 2px;
 }
@@ -114,6 +114,29 @@ a:active  { color: #1155cc;                             }
   display: inline-block;
   padding: 0 5px 0 0;
   font-style: italic;
+}
+
+/*****************************   Ratings Content Styling   *****************************/
+.ratings-name-row {
+  display: flex;
+  -webkit-display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  padding: 0 0 4px;
+}
+
+.ratings-title {
+  font-size: .75em;
+  font-weight: 600;
+  padding: 0 0 2px;
+}
+
+.ratings-star-container {
+  height: 1em;
+}
+
+.ratings-comment {
+  font-size: .75em;
 }
 
 /*****************************   Footer Styling   *****************************/
