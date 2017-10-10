@@ -15,7 +15,7 @@ const AppContent2 = () => {
       <Header />
       <Route exact path='/' component={gaTracker(MainContent)} />
       <Route path='/Location' component={gaTracker(MapAndLocation)} />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
