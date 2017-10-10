@@ -139,6 +139,29 @@ a:active  { color: #1155cc;                             }
   font-size: .75em;
 }
 
+/*****************************   Operations Content Styling   *****************************/
+.operations-container .operations-type-container:nth-last-of-type(1n+2) {
+  padding: 0 0 4px;
+}
+
+.operations-type {
+  padding: 0 0 4px;
+}
+
+.operations-hours-row {
+  font-size: .75em;
+  padding: 0 0 2px;
+}
+
+.operations-days {
+  display:inline-block;
+  width: 120px;
+}
+
+.operations-hours {
+  font-weight: 600;
+}
+
 /*****************************   Footer Styling   *****************************/
 .footer-content {
   width: 100%;
