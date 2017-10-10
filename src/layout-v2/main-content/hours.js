@@ -9,7 +9,7 @@ const Units = () => {
       <div className='mc-sub-panel-header-container'>
         <h1 className='mc-sub-panel-header'>Hours of Operations</h1>
         <div>
-
+          
           {/* <div>
             <p className='units-dim-row'>
               <span className='units-dimensions'>7.5' x 10'</span>
