@@ -202,23 +202,3 @@ a:active  { color: #1155cc;                             }
   font-size: .75em;
   padding: 0 0 2px;
 }
-
-/*****************************   Footer Styling   *****************************/
-.footer-content {
-  width: 100%;
-  margin: auto 0px 0px;
-}
-
-.footer-base {
-  text-align: center;
-  padding: 0 0 5px;
-}
-
-.footer-text {
-  font-style: italic;
-  font-size: 1.15em;
-}
-
-.footer-subtext {
-  font-size: .6em;
-}
