@@ -2,6 +2,7 @@ import React from 'react'
 
 import RatingsIcon from './ratings-icon.png'
 import RatingsIconGold from './ratings-icon-gold.png'
+import RatingsIconGrey from './ratings-icon-grey.png'
 
 const Ratings = () => {
   return (
@@ -9,25 +10,135 @@ const Ratings = () => {
       <img className='mc-sub-panel-img' src={RatingsIcon} alt='a star image representing a section that displays user reviews' />
       <div className='mc-sub-panel-header-container'>
         <h1 className='mc-sub-panel-header'>Ratings</h1>
-        <div>
-          <div className='ratings-name-row'>
-            <p>K Thornton</p>
-            <div className='ratings-star-container'>
-              <img className='img-fill' src={RatingsIconGold} alt='a star image representing 1 of 5 total stars a reviewer can give on a review' />
-              <img className='img-fill' src={RatingsIconGold} alt='a star image representing 2 of 5 total stars a reviewer can give on a review' />
-              <img className='img-fill' src={RatingsIconGold} alt='a star image representing 3 of 5 total stars a reviewer can give on a review' />
-              <img className='img-fill' src={RatingsIconGold} alt='a star image representing 4 of 5 total stars a reviewer can give on a review' />
-              <img className='img-fill' src={RatingsIconGold} alt='a star image representing 5 of 5 total stars a reviewer can give on a review' />
-            </div>
-          </div>
-          <p className='ratings-title'>Great Value and Awesome Customer Service</p>
-          <p className='ratings-comment'>They have multi size units and will work with you if you lease over two units. They also offer electronic transfer for the monthly fee. Good customer service if any issue should arise.</p>
-        </div>
+        {createRatings(ratingsData)}
       </div>
     </div>
   )
 }
 
+/*****************************   Ratings Containers   *****************************/
+/**********************************************************************************/
+
+// creates the main container for the ratings
+const createRatings = (ratingsData) => {
+  let ratings = []
+
+  ratings = ratingsData.map( rating => createRating(rating))
+
+  return (
+    <div className='ratings'>
+      {ratings}
+    </div>
+  )
+}
+
+// creates each individual rating
+const createRating = (rating) => {
+  return (
+    <div className='rating-container' key={rating.ID}>
+      {createRatingsNameRow(rating.reviewerName, rating.rating)}
+      {createRatingsInfoContainer(rating.title, rating.comment)}
+    </div>
+  )
+}
+
+/*****************************   Ratings Info Heading   *****************************/
+/************************************************************************************/
+
+// creates the ratings row with the name and the stars for that rating
+const createRatingsNameRow = (name, rating) => {
+  console.log(rating)
+  return (
+    <div className='ratings-name-row'>
+      {createRatingsName(name)}
+      {createRatingsStarContainer(rating)}
+    </div>
+  )
+}
+
+// creates the rating name <p> element
+const createRatingsName = (name) => {
+  return (
+    <p>
+      {name}
+    </p>
+  )
+}
+
+// creates the rating stars container
+const createRatingsStarContainer = (rating) => {
+  let stars = []
+
+  for(let i = 0 ; i < 5 ; i++) {
+    if(rating >= i) {
+      stars.push(createRatingsStar(true, i))
+    }
+    else {
+      stars.push(createRatingsStar(false, i))
+    }
+  }
+
+  return (
+    <div className='ratings-star-container'>
+      {stars}
+    </div>
+  )
+}
+
+// creates each individual star
+const createRatingsStar = (isGold, key) => {
+  let imgSrc = null
+
+  if(true === isGold) {
+    imgSrc = RatingsIconGold
+  }
+  else {
+    imgSrc = RatingsIconGrey
+  }
+
+  return (
+    <img key={key} className='img-fill' src={imgSrc} alt='a star image representing one of the five total stars a reviewer can give on a review' />
+  )
+}
+
+/*****************************   Ratings Info Content   *****************************/
+/************************************************************************************/
+
+// creates the ratings information container with the title and comment
+const createRatingsInfoContainer = (title, comment) => {
+  return (
+    <div className='ratings-info-container'>
+      {createRatingsTitle(title)}
+      {createRatingsComment(comment)}
+    </div>
+  )
+}
+
+// creates the ratings title
+const createRatingsTitle = (title) => {
+  let pClass = 'ratings-title'
+
+  if(title === '')
+    pClass += ' hidden-element'
+
+  return (
+    <p className={pClass}>
+      {title}
+    </p>
+  )
+}
+
+// creates the ratings comment
+const createRatingsComment = (comment) => {
+  return (
+    <p className = 'ratings-comment'>
+      {comment}
+    </p>
+  )
+}
+
+/*****************************   Ratings Data   *****************************/
+/****************************************************************************/
 const ratingsData = [
   {
     ID: 1,
