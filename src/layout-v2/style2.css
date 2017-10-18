@@ -116,6 +116,11 @@ a:active  { color: #1155cc;                             }
   width: 120px;
 }
 
+.units-rate-sup {
+  vertical-align: top;
+  font-size: .75em;
+}
+
 .units-info-container {
   padding: 0 0 0 20px;
 }
