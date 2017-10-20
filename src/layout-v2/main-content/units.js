@@ -116,7 +116,7 @@ const createUnitsInfo = (isAvailable, unitDiscountDescription) => {
     <div className='units-info-container'>
       <p className='units-info-text'>
         {createUnitAvailability(isAvailable)}
-        <span>{unitDiscountDescription}</span>
+        {createUnitDescription(unitDiscountDescription, isAvailable)}
       </p>
     </div>
   )
@@ -125,16 +125,35 @@ const createUnitsInfo = (isAvailable, unitDiscountDescription) => {
 // break this out into it's own because we'll probably end up doing a little
 // more for the availability text like show red when it's unavailable
 const createUnitAvailability = (isAvailable) => {
-  let text = 'Available'
+  let text = 'Ready To Reserve'
+  let classNameValue = 'units-info-availability'
 
   if(false === isAvailable) {
-    text = 'Unavailable'
+    text = 'No Vacancies'
+    classNameValue += ' unit-not-available'
+  }
+  else {
+    classNameValue += ' unit-available'
   }
 
   return (
-    <span className='units-info-availability'>
+    <span className={classNameValue}>
       {text}
     </span>
+  )
+}
+
+// creates the description text for the unit, such as the discount available
+// we hide the discount if there's nothing available
+const createUnitDescription = (unitDiscountDescription, isAvailable) => {
+  let text = ''
+
+  if(isAvailable === true) {
+    text = unitDiscountDescription
+  }
+
+  return (
+    <span>{text}</span>
   )
 }
 
@@ -174,7 +193,7 @@ const storageUnitData = [
       Width: 15
     },
     Rate: 120,
-    Available: true,
+    Available: false,
     DiscountVisible: true,
     DiscountId: 0
   }

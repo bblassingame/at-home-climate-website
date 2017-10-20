@@ -55,18 +55,31 @@ a:active  { color: #1155cc;                             }
   height: 48px;
   margin: 0px;
   padding: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
   -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .social-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-display: flex;
 }
 
 .social-container :nth-child(0n+2) {
-  padding: 0 5px;
+  padding: 0 5px 0 5px;
+  width: 48px;
+}
+
+.social-img-container {
+  height:38px;
+  width:38px;
 }
 
 .social-img {
@@ -138,6 +151,16 @@ a:active  { color: #1155cc;                             }
   display: inline-block;
   padding: 0 5px 0 0;
   font-style: italic;
+}
+
+.unit-available {
+  font-weight: 600;
+  color: black;
+}
+
+.unit-not-available {
+  font-weight: 500;
+  color: red;
 }
 
 /*****************************   Operations Content Styling   *****************************/

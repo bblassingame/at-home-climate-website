@@ -5,7 +5,7 @@ import SFLogo from './Squarefoot_Logo.png'
 
 const SparefootLogo = () => {
   return (
-    <div>
+    <div className='social-img-container'>
       <ReactGA.OutboundLink eventLabel='Click To Sparefoot' to='https://www.sparefoot.com/Longview-TX-self-storage/At-Home-Climate-Storage-153722.html'>
         <img className='social-img' src={SFLogo} alt='Visit At Home Climate Storage on Sparefoot' />
       </ReactGA.OutboundLink>

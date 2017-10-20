@@ -5,7 +5,7 @@ import FBLogo from './FB-f-Logo__blue_50.png'
 
 const FacebookLogo = () => {
   return (
-    <div>
+    <div className='social-img-container'>
       <ReactGA.OutboundLink eventLabel='Click To Facebook' to='https://www.facebook.com/AtHomeClimateStorage/'>
         <img className='social-img' src={FBLogo} alt='Visit At Home Climate Storage on Facebook' />
       </ReactGA.OutboundLink>
