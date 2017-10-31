@@ -205,7 +205,7 @@ const discountsData = [
     Name: '7th Month Free',
     Requirements: '',
     Discount: '',
-    Description: '7th month free & no administrative fee with 6 month lease and online reservation'
+    Description: '7th month free & no administrative fee with 6 month lease'
   },
   {
     Id: 1,

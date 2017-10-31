@@ -10,9 +10,9 @@ const Header = () => {
     <div className='header-content'>
       <HeaderLogo />
       <div className='social-container'>
-        <SquarefootLogo />
-        <YelpLogo />
         <FacebookLogo />
+        <YelpLogo />
+        <SquarefootLogo />
       </div>
     </div>
   )
